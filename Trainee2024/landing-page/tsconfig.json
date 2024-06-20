@@ -8,6 +8,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
+    
 
     /* Strictness */
     "strict": true,
@@ -39,4 +40,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
+  
+  
 }
