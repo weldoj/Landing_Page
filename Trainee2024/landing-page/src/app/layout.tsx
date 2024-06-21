@@ -1,5 +1,5 @@
-import "~/styles/contato.module.css";
-import "~/styles/intro.module.css";
+
+
 
 import { GeistSans } from "geist/font/sans";
 
