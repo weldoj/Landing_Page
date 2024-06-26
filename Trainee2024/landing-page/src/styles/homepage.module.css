@@ -1,0 +1,82 @@
+.main{
+    justify-content: center;
+
+}
+
+.texto{
+    text-align: center;
+    padding: 8%;
+}
+.texto h2 {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.73px;
+    text-align: center;
+    color: #A09D9D;
+}
+.texto h3 {
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 38.73px;
+    text-align: center;
+    color: #A09D9D;
+}
+.main div button{
+    color: #FFF;
+    box-sizing: border-box;
+    font-size: 32px;
+    width: 331px;
+    height: 59px;
+    left: 807.94px;
+    top: 1176px;    
+    background: #6ADD57;
+    border: 1px solid #D9D9D9;
+    border-radius: 9px;
+}
+.boxes{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8%;
+}
+.box1{
+    width: 360px;
+    height: 320px;
+    top: 1513px;
+    border: 1px;
+    margin: 10px 20px 20px 20px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    border-radius: 2%;
+    padding: 0.5%;
+}
+.imgs{
+    padding: 37px 10px 0px 2px;
+}
+.b{
+    display: flex;
+}
+.b h4{
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+}
+.box1 li{
+    margin: -20px 10px 23px 10px;
+}
+.box1 p{
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    margin: -22px 20px 5px 20px;
+    list-style: inside;
+}
+.footer {
+    background: #F3EFEF;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 350px 0;
+}
