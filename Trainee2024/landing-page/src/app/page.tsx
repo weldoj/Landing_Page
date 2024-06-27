@@ -1,39 +1,41 @@
-import Link from "next/link";
-
-import styles from "./index.module.css";
+import styles from "~/styles/Funcionalidades.module.css"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>
-          Create <span className={styles.pinkSpan}>T3</span> App
-        </h1>
-        <div className={styles.cardRow}>
-          <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className={styles.cardTitle}>First Steps →</h3>
-            <div className={styles.cardText}>
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
+    <main>
+      <section className={styles.section_funcionalidades}>
+        <h2>Funcionalidades</h2>
+        <div className={styles.funcionalidades}>
+          <div className={styles.funcionalidade}>
+            <img src="" alt="" />
+            <div className={styles.texto}>
+              <h3>Gestão de produtos</h3>
+              <p>Gerencie seus produtos com facilidade</p>
             </div>
-          </Link>
-          <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className={styles.cardTitle}>Documentation →</h3>
-            <div className={styles.cardText}>
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
+          </div>
+          <div className={styles.funcionalidade}>
+            <div className={styles.texto}>
+              <h3>Entradas e saídas</h3>
+              <p>Controle todas as entradas e saídas com facilidade. Nosso sistema atualiza automatciamente o saldo do estoque conforme você faz movimentações. Tenha sempre uma visão precisa e atualizada do seu inventário, sem complicações.</p>
             </div>
-          </Link>
+            <img src="" alt="" />
+          </div>
+          <div className={styles.funcionalidade}>
+            <img src="" alt="" />
+            <div className={styles.texto}>
+              <h3>Página de Extrato</h3>
+              <p>Acompanhe todas as movimentações do seu estoque em um só lugar. Nosso extrato detalhado oferece uma visão clara das entradas e saídas, garantindo que você tenha sempre o controle total do seu inventário.</p>
+            </div>
+          </div>
+          <div className={styles.funcionalidade}>
+            <div className={styles.texto}>
+              <h3>Acesse de Qualquer Lugar<br>com Internet</h3>
+              <p>Tenha o controle do seu estoque na palma da sua mão. Com nosso sistema on-line, você pode acessar todas as funcionalidades de qualquer lugar, bastando apenas ter uma conexão à internet e um navegador.</p>
+            </div>
+            <img src="" alt="" />
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
