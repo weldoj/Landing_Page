@@ -1,11 +1,17 @@
 import Link from "next/link";
-
-import styles from "./index.module.css";
+import styles from "~/styles/index.module.css";
+import { OlaMundo } from "../_components/olaMundo";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.container}>
+      <OlaMundo/>
+    </main>
+  );
+}
+
+
+{/* <div className={styles.container}>
         <h1 className={styles.title}>
           Create <span className={styles.pinkSpan}>T3</span> App
         </h1>
@@ -33,7 +39,4 @@ export default function Home() {
             </div>
           </Link>
         </div>
-      </div>
-    </main>
-  );
-}
+      </div> */}

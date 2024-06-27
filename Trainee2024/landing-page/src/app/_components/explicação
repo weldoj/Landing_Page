@@ -1,0 +1,7 @@
+componentes que será utilizada em todas as paginas serão colocados e criados nessa pasta
+exemplo:
+    Footer;
+    NavBar;
+    e os componentes da landing page nesse caso, porque essa lista só vai ter uma página que é a propria landing page
+
+Depois é só esxportar esse componente na page.tsx dentro da pasta (landing-page)
