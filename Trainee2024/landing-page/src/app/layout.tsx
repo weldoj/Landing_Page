@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
+import { Footer } from "~/app/_components/footer"
 
 export const metadata = {
   title: "Create T3 App",
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>{children}</body>
+      <Footer/>
     </html>
   );
 }

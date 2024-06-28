@@ -1,13 +1,16 @@
+import { Quadradinhos } from "../_components/quadradinhos";
+import styles from "~/styles/index.module.css";
 import Link from "next/link";
-import React from 'react';
-import { Form } from "~/app/_components/form"
-import { Intro } from "~/app/_components/intro"
+import React from "react";
+import { Form } from "~/app/_components/form";
+import { Intro } from "~/app/_components/intro";
 import contatoStyles from "~/styles/contato.module.css";
 import "~/styles/globals.css";
 
 export default function Homepage() {
   return (
-    <main>
+    <main className={styles.main}>
+      <Quadradinhos />
 
       <Intro />
       <div className={contatoStyles.contato}>
@@ -18,5 +21,3 @@ export default function Homepage() {
     </main>
   );
 }
-
-
