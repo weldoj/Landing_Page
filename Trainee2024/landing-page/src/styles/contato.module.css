@@ -37,6 +37,7 @@
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     font-family: 'Inter', sans-serif;
+
 }
 
 .input:focus {
@@ -58,7 +59,7 @@
 
 .button {
     padding: 10px;
-    margin-left: 320px;
+    margin-left: 270px;
     width: 80px;
     background-color: #fff;
     color: black;
@@ -96,6 +97,23 @@
     .button {
         margin-left: auto;
     }
+   
+
+}
+
+@media screen and (max-width:425px) {
+
+    .form {
+        
+        background-color: white ;
+        box-shadow: none;
+
+    }
+
+    .input {
+        width: 100%;
+    }
+
    
 
 }

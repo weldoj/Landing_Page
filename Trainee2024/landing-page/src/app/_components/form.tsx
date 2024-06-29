@@ -54,7 +54,7 @@ export function Form() {
     }
 
     return (
-        <form className={contatoStyles.form} onSubmit={handleSubmit}>
+        <form  className={contatoStyles.form} onSubmit={handleSubmit}>
             <div className={contatoStyles.inputGroup}>
                 <label htmlFor="nome" className={contatoStyles.label}>
                     Nome

@@ -5,6 +5,10 @@
     justify-content: center;
     flex-flow: row wrap;
     height: 580px;
+    margin-top: 5rem;
+    
+    
+
 }
 
 .introText {

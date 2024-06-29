@@ -12,9 +12,8 @@ export default function Homepage() {
     <main className={styles.main}>
       <Quadradinhos />
 
-      <Intro />
       <div className={contatoStyles.contato}>
-        <h2 className={contatoStyles.title}>Contato</h2>
+        <h2 id="Contato" className={contatoStyles.title}>Contato</h2>
 
         <Form />
       </div>

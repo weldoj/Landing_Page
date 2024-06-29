@@ -4,7 +4,7 @@ import { dados_quadradinhos } from "../lib/dados_quadradinhos";
 
 export function Quadradinhos() {
   return (
-    <div className={styles.main}>
+    <div id="#Benefícios" className={styles.main}>
       <div className={styles.texto}>
         <h2>Descubra como o EstoqueFlex pode transformar sua empresa!</h2>
         <h3>
@@ -33,12 +33,14 @@ export function Quadradinhos() {
               />
               <h4>{dado.titulo}</h4>
             </div>
-            <li>
-              <p>{dado.paragrafo1}</p>
-            </li>
-            <li>
-              <p>{dado.paragrafo2}</p>
-            </li>
+            <ul>
+              <li>
+                <p>{dado.paragrafo1}</p>
+              </li>
+              <li>
+                <p>{dado.paragrafo2}</p>
+              </li>
+            </ul>
           </div>
         ))}
       </div>
