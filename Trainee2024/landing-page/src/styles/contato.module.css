@@ -3,15 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    min-height: 100vh;
+    padding: 5px;
     font-family: 'Inter', sans-serif;
 }
 
 .title {
     margin-bottom: 20px;
-    font-size: 48px;
+    font-size: 4rem;
     font-weight: 550;
     text-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     color: #3C78EE;
@@ -28,6 +26,7 @@
     border-radius: 8px;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     font-family: 'Inter', sans-serif;
+    margin-bottom: 5rem ;
 }
 
 .input {
@@ -55,6 +54,7 @@
     padding-bottom: 12px;
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+    text-align: start;
 }
 
 .button {
@@ -107,13 +107,11 @@
         
         background-color: white ;
         box-shadow: none;
+        padding: 0;
 
     }
 
-    .input {
-        width: 100%;
-    }
-
+    
    
 
 }

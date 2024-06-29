@@ -42,10 +42,10 @@ export function Nav() {
             {Abrir &&
             <div className={styles.divmenu}>
                 <ul className={styles.menulinks} >
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Benefícios</a></li>
-                    <li><a href="#">Funcionalidades</a></li>
-                    <li><a href="#">Contato</a></li>
+                <li><Link   href="#Início">Início </Link></li>
+                    <li><Link href="#Benefícios">Benefícios</Link></li>
+                    <li><Link  href="#Funcionalidades">Funcionalidades</Link></li>
+                    <li><Link   href="#Contato">Contato </Link></li>
                 </ul>
             </div>
             }
