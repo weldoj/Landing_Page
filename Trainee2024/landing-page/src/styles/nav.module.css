@@ -1,0 +1,104 @@
+.nav {
+    display: flex;
+    height: 100px;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: fixed; 
+    top: 0;
+}
+
+.logo {
+    flex: 20%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.logoh1 {
+    font-size: 40px;
+}
+
+ul.links_4 {
+
+    padding: 0 8rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 500;
+   
+}
+
+ul.links_4 li {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul.links_4 li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+    white-space: nowrap;
+
+}
+
+.menu {
+    display: none;
+    background-color: white;
+    border: none;
+    
+}
+
+.menulinks {
+    display: none;
+}
+
+@media screen and (max-width:1008px) {
+    .menu {
+        display: flex;
+        margin-right: 55px;
+    }
+    ul.links_4 {
+        display: none;
+       
+    }
+    .menulinks {
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        gap: 4px;
+        font-size: 20px;
+        font-weight: 500;
+       
+    }
+
+    .divmenu {
+        align-items: center;
+        display: flex;
+        justify-content: end;
+        position: absolute;
+        background-color: white;
+        right: 0;
+        height: 11rem;
+        align-items: start;
+    }
+
+}
+
+@media screen and (max-width:425px) {
+
+    
+    .logoh1 {
+        font-size: 25px;
+        margin-right: 20px;
+    }
+   
+
+}
+

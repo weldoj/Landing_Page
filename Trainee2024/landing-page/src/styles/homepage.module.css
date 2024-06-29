@@ -1,0 +1,90 @@
+.main {
+  justify-content: center;
+  width: auto;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-wrap: balance;
+}
+.texto h2 {
+  font-family: Inter;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.73px;
+  text-align: center;
+  color: #a09d9d;
+}
+.texto h3 {
+  font-family: Inter;
+  font-weight: 700;
+  line-height: 38.73px;
+  text-align: center;
+  color: #a09d9d;
+}
+.main div button {
+  color: #fff;
+  font-size: 32px;
+  width: 331px;
+  height: 59px;
+  background: #6add57;
+  border: 1px solid #d9d9d9;
+  border-radius: 9px;
+}
+.boxes {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 47px;
+
+}
+.box1 {
+  width: 400px;
+  height: 315px;
+  border: 1px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 2%;
+  padding: 30px 0 0 17px;
+}
+
+.b {
+  display: flex;
+  align-items: center;
+
+}
+.b h4 {
+  font-family: Inter;
+  font-size: 155%;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  padding-left: 8px;
+
+}
+.box1 ul{
+  padding-left: 17px;
+}
+
+.box1 p {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+}
+.footer {
+  background: #f3efef;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 300px;
+  padding-top: 15px;
+}
+
+@media screen and (max-width:375px) {
+  .main div button {
+    width: 300px;
+  }
+}

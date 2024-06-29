@@ -1,0 +1,68 @@
+.intro {
+    background-color: #3C78EE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    height: 580px;
+    margin-top: 5rem;
+    
+    
+
+}
+
+.introText {
+    flex: 35%;
+    margin-left: 15%;
+
+}
+
+.introP1 {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+.introP2 {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+}
+
+.introImg {
+    flex: 40%;
+    margin-right: 10%;
+
+}
+
+
+.introImg img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 9px;
+}
+
+@media screen and (max-width:1008px) {
+
+    .intro {
+        height: auto;
+       
+    }
+    .introText {
+        flex: 100%;
+        margin: 10% 10% 5% 10%;
+        text-align: center;
+    }
+
+    .introImg img {
+        flex: 100%;
+        margin: 0% 10% 10% 10%;
+        text-align: center;
+    }
+    
+
+}

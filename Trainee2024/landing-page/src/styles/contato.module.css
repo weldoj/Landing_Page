@@ -1,0 +1,118 @@
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 550;
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    color: #3C78EE;
+    font-family: 'Inter', sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: #F3EFEF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 5rem ;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 6px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.input:focus {
+    outline: none;
+    border-color: #0070f3;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.label {
+    padding-bottom: 12px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    text-align: start;
+}
+
+.button {
+    padding: 10px;
+    margin-left: 270px;
+    width: 80px;
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #005bb5;
+    color: #fff;
+}
+
+.error {
+    font-size: 10px;
+    color: red;
+    font-weight: 300;
+    min-height: 12px;
+
+
+}
+
+@media screen and (max-width:1008px) {
+
+    .contato {
+        width: auto;
+        height: auto;
+        margin: 10%;
+    }
+
+    .button {
+        margin-left: auto;
+    }
+   
+
+}
+
+@media screen and (max-width:425px) {
+
+    .form {
+        
+        background-color: white ;
+        box-shadow: none;
+        padding: 0;
+
+    }
+
+    
+   
+
+}
+
