@@ -6,21 +6,30 @@ export function Funcionalidades() {
             <h2>Funcionalidades</h2>
             <div className={styles.funcionalidades}>
                 <div className={styles.funcionalidade}>
+                    <div className={styles.texto}>
+                        <h3>Gestão de produtos</h3>
+                        <p>Gerencie seus produtos com facilidade</p>
+                    </div>
                     <div>
                         <Image
                             className={styles.img}
                             width={629}
                             height={447}
-                            src="/product managment.webp"
+                            src="/CadastrodeProdutos.png"
                             alt=""
                         />
                     </div>
-                    <div className={styles.texto}>
-                        <h3>Gestão de produtos</h3>
-                        <p>Gerencie seus produtos com facilidade</p>
-                    </div>
                 </div>
                 <div className={styles.funcionalidade2}>
+                    <div>
+                        <Image
+                            className={styles.img}
+                            width={629}
+                            height={447}
+                            src="/EntradaseSaida.png"
+                            alt=""
+                        />
+                    </div>
                     <div className={styles.texto}>
                         <h3>Entradas e saídas</h3>
                         <p>
@@ -30,26 +39,10 @@ export function Funcionalidades() {
                             inventário, sem complicações.
                         </p>
                     </div>
-                    <div>
-                        <Image
-                            className={styles.img}
-                            width={629}
-                            height={447}
-                            src="/Entradas e saidas.png"
-                            alt=""
-                        />
-                    </div>
+
                 </div>
                 <div className={styles.funcionalidade}>
-                    <div>
-                        <Image
-                            className={styles.img}
-                            width={629}
-                            height={447}
-                            src="/pagina de extrato.jpg"
-                            alt=""
-                        />
-                    </div>
+
                     <div className={styles.texto}>
                         <h3>Página de Extrato</h3>
                         <p>
@@ -59,8 +52,26 @@ export function Funcionalidades() {
                             inventário.
                         </p>
                     </div>
+                    <div>
+                        <Image
+                            className={styles.img}
+                            width={629}
+                            height={447}
+                            src="/PaginadeExtrato.png"
+                            alt=""
+                        />
+                    </div>
                 </div>
                 <div className={styles.funcionalidade2}>
+                    <div>
+                        <Image
+                            className={styles.img}
+                            width={629}
+                            height={447}
+                            src="/Mockup1.png"
+                            alt=""
+                        />
+                    </div>
                     <div className={styles.texto}>
                         <h3>Acesse de Qualquer Lugar com Internet</h3>
                         <p>
@@ -69,15 +80,6 @@ export function Funcionalidades() {
                             qualquer lugar, bastando apenas ter uma conexão à internet e um
                             navegador.
                         </p>
-                    </div>
-                    <div>
-                        <Image
-                            className={styles.img}
-                            width={629}
-                            height={447}
-                            src="/acesse de qualquer lugar.jpg"
-                            alt=""
-                        />
                     </div>
                 </div>
             </div>
