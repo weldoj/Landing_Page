@@ -22,6 +22,7 @@
   .texto {
     display: flex;
     flex-direction: column;
+    flex: 40%
   }
   
   .section_funcionalidades {
@@ -167,5 +168,20 @@
 
     .texto > p {
       font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .section_funcionalidades {
+      margin: 0;
+    }
+    .section_funcionalidades > h2 {
+      font-size: 2.3rem;
+    }
+    .img {
+      width: 295px;
+    }
+    .texto {
+      max-width: 295px;
     }
   }

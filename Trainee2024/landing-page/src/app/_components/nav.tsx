@@ -23,6 +23,7 @@ export function Nav() {
                     <li><Link href="#Benefícios">Benefícios</Link></li>
                     <li><Link  href="#Funcionalidades">Funcionalidades</Link></li>
                     <li><Link   href="#Contato">Contato </Link></li>
+                    <li><Link   href="#">Entrar </Link></li>
                 </ul>
 
 
@@ -46,6 +47,7 @@ export function Nav() {
                     <li><Link href="#Benefícios">Benefícios</Link></li>
                     <li><Link  href="#Funcionalidades">Funcionalidades</Link></li>
                     <li><Link   href="#Contato">Contato </Link></li>
+                    <li><Link   href="#">Entrar </Link></li>
                 </ul>
             </div>
             }
