@@ -80,3 +80,10 @@ model Produto {
     quantidadeEmEstoque Int
     transacoes          Transacao[]
 }
+model Contato {
+    id                  Int         @id @default(autoincrement())
+    nome                String
+    email               String      @unique
+    telefone            String
+    createdAt           DateTime @default(now())
+}
