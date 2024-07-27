@@ -5,14 +5,14 @@ export async function GET(req: NextRequest) {
         const id = req.nextUrl.searchParams.get('id')
 
         if (id) {
-            const contato = await db.Contato.findUnique({
+            const contato = await db.contato.findUnique({
                 where: {
                     id: Number(id)
                 }
             })
             return NextResponse.json({ message: "OK", contato })
         } else {
-            const contatos = await db.Contato.findMany()
+            const contatos = await db.contato.findMany()
             return NextResponse.json({ message: "OK", contatos })
         }
     } catch (err) {
@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
 export async function POST(req: NextRequest) {
     const { nome, email, telefone } = await req.json() as { nome: string, email: string, telefone: string }
     try {
-        const contato = await db.Contato.create({
+        const contato = await db.contato.create({
             data: {
                 nome,
                 email,
@@ -56,9 +56,9 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
-    const { id, nome, email, telefone } = await req.json() as { nome: string, email: string, telefone: string, id: Number }
+    const { id, nome, email, telefone } = await req.json() as { nome: string, email: string, telefone: string, id: number }
     try {
-        const contato = await db.Contato.update({
+        const contato = await db.contato.update({
             where: {
                 id
             },
@@ -85,9 +85,9 @@ export async function PATCH(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-    const { id } = await req.json() as { id: Number }
+    const { id } = await req.json() as { id: number }
     try {
-        const contato = await db.Contato.delete({
+        const contato = await db.contato.delete({
             where: {
                 id
             },

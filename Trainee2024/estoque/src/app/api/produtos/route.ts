@@ -2,18 +2,50 @@ import { NextResponse, type NextRequest } from "next/server";
 import { db } from "~/server/db";
 export async function GET(req: NextRequest) {
     try {
-        const id = req.nextUrl.searchParams.get('id')
+        const id = req.nextUrl.searchParams.get('id');
+        const filtro = req.nextUrl.searchParams.get('filtro');
+        const semEstoque = req.nextUrl.searchParams.get('semEstoque');
 
         if (id) {
-            const produto = await db.Produto.findUnique({
+            const produto = await db.produto.findUnique({
                 where: {
                     id: Number(id)
                 }
-            })
-            return NextResponse.json({ message: "OK", produto })
+            });
+
+            if (produto) {
+                return NextResponse.json({ message: "OK", produto });
+            } else {
+                return NextResponse.json({ message: "Produto não encontrado" }, { status: 404 });
+            }
         } else {
-            const produtos = await db.Produto.findMany()
-            return NextResponse.json({ message: "OK", produtos })
+            let produtos;
+            if (semEstoque === "true") {
+                produtos = await db.produto.findMany({
+                    where: {
+                        quantidadeEmEstoque: 0
+                    }
+                });
+            } else {
+
+                if (filtro === "asc") {
+                    produtos = await db.produto.findMany({
+                        orderBy: {
+                            quantidadeEmEstoque: "asc"
+                        }
+                    });
+                } else if (filtro === "desc") {
+                    produtos = await db.produto.findMany({
+                        orderBy: {
+                            quantidadeEmEstoque: "desc"
+                        }
+                    });
+                } else {
+                    produtos = await db.produto.findMany();
+                }
+            }
+
+            return NextResponse.json({ message: "OK", produtos });
         }
     } catch (err) {
         if (err instanceof Error) {
@@ -25,14 +57,23 @@ export async function GET(req: NextRequest) {
                 {
                     status: 500
                 }
-            )
+            );
+        } else {
+            return NextResponse.json(
+                {
+                    message: "Unexpected error"
+                },
+                {
+                    status: 500
+                }
+            );
         }
     }
 }
 export async function POST(req: NextRequest) {
-    const { nome, quantidadeEmEstoque } = await req.json() as { nome: string, quantidadeEmEstoque: Number }
+    const { nome, quantidadeEmEstoque } = await req.json() as { nome: string, quantidadeEmEstoque: number }
     try {
-        const produto = await db.Produto.create({
+        const produto = await db.produto.create({
             data: {
                 nome,
                 quantidadeEmEstoque
@@ -55,9 +96,9 @@ export async function POST(req: NextRequest) {
 }
 
 export async function PATCH(req: NextRequest) {
-    const { id, nome, quantidadeEmEstoque } = await req.json() as { nome: string, quantidadeEmEstoque: Number, id: Number }
+    const { id, nome, quantidadeEmEstoque } = await req.json() as { nome: string, quantidadeEmEstoque: number, id: number }
     try {
-        const produto = await db.Produto.update({
+        const produto = await db.produto.update({
             where: {
                 id
             },
@@ -83,9 +124,9 @@ export async function PATCH(req: NextRequest) {
 }
 
 export async function DELETE(req: NextRequest) {
-    const { id } = await req.json() as { id: Number }
+    const { id } = await req.json() as { id: number }
     try {
-        const produto = await db.Produto.delete({
+        const produto = await db.produto.delete({
             where: {
                 id
             },
