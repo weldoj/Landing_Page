@@ -1,18 +1,23 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { Produto, User } from "prisma";
 import { db } from "~/server/db";
 export async function GET(req: NextRequest) {
     try {
         const id = req.nextUrl.searchParams.get('id')
+        const time = await db.transacao.findMany({
+            orderBy: {
+                data:"asc"
+            })
 
         if (id) {
-            const transacao = await db.Transacao.findUnique({
+            const transacao = await db.transacao.findUnique({
                 where: {
                     id: Number(id)
                 }
             })
             return NextResponse.json({ message: "OK", transacao })
         } else {
-            const transacoes = await db.Transacao.findMany()
+            const transacoes = await db.transacao.findMany()
             return NextResponse.json({ message: "OK", transacoes })
         }
     } catch (err) {
@@ -30,12 +35,14 @@ export async function GET(req: NextRequest) {
     }
 }
 export async function POST(req: NextRequest) {
-    const { tipo ,quantidade } = await req.json() as { tipo: string , quantidade: Number }
+    const { tipo ,quantidade, userId ,produtoId} = await req.json() as { tipo: string , quantidade: Number , userId: string , produtoId: Number}
     try {
-        const transacao = await db.Transacao.create({
+        const transacao = await db.transacao.create({
             data: {
                 tipo,
-                quantidade
+                quantidade,
+                userId,
+                produtoId
 
             }
         })
@@ -58,7 +65,7 @@ export async function POST(req: NextRequest) {
 export async function PATCH(req: NextRequest) {
     const { id, tipo, quantidade } = await req.json() as { tipo: string, quantidade: Number, id: Number }
     try {
-        const transacao = await db.Transacao.update({
+        const transacao = await db.transacao.update({
             where: {
                 id
             },
