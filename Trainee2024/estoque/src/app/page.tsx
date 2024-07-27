@@ -1,6 +1,16 @@
 import Link from "next/link";
 
 import styles from "./index.module.css";
+import AuthComponent from '../components/AuthComponent';
+
+// export default function Home() {
+//   return (
+//     <main>
+//       <h1>Welcome to My App</h1>
+//       <AuthComponent />
+//     </main>
+//   );
+// }
 
 export default function Home() {
   return (
@@ -33,6 +43,9 @@ export default function Home() {
             </div>
           </Link>
         </div>
+        <h1>Página de Login</h1>
+        <AuthComponent />
+
       </div>
     </main>
   );
