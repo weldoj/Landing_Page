@@ -31,3 +31,8 @@
 .pesquisa button :hover {
   background: #d6cece;
 }
+.produtos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+}
