@@ -8,7 +8,7 @@ export function Venda() {
 
   const handleOptionClick = (option: string) => {
     setSelecionado(option);
-    setIsOpen(false); // Fechar o dropdown após a seleção
+    setIsOpen(false);
   };
 
   return (
@@ -49,7 +49,10 @@ export function Venda() {
           </a>
         </div>
       </div>
-      <button className={styles.filtro}>FILTRAR</button>
+
+      <a className={styles.botaofiltro} href="#Filtrar">
+        <button className={styles.filtro}>FILTRAR</button>
+      </a>
     </div>
   );
 }

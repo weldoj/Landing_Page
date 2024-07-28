@@ -74,7 +74,9 @@ export function Extratos() {
           </a>
         </div>
       </div>
-      <button className={styles.filtro}>FILTRAR</button>
+      <a className={styles.botaofiltro} href="#Filtrar">
+        <button className={styles.filtro}>FILTRAR</button>
+      </a>
     </div>
   );
 }
