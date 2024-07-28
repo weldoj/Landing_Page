@@ -35,9 +35,11 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding-right: 14px;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
   
-    justify-content: right;
+    justify-content: space-between;
     font-family: "Inter";
     font-style: normal;
     font-weight: 500;
@@ -47,9 +49,9 @@
   }
   
   .seta {
-    margin: 2px 0 0 58%;
     width: 24px;
     height: 24px;
+    
   }
   .dropdownContent {
     display: none;

@@ -9,7 +9,7 @@ export function Saidas() {
     <div className={styles.ext}>
       <div className={styles.dropdown}>
         <button className={styles.dropbtn} onClick={() => setIsOpen(!isOpen)}>
-          Selecione um Item{" "}
+          <div>Selecione um Item{" "}</div>
           <img className={styles.seta} src="/imagens/setabaixo.png" />
         </button>
         <div
