@@ -14,34 +14,22 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-
-    createdBy   User   @relation(fields: [createdById], references: [id])
-    createdById String
-
-    @@index([name])
-}
-
 // Necessary for Next auth
+
 model Account {
-    id                       String  @id @default(cuid())
-    userId                   String
-    type                     String
-    provider                 String
-    providerAccountId        String
-    refresh_token            String? // @db.Text
-    access_token             String? // @db.Text
-    expires_at               Int?
-    token_type               String?
-    scope                    String?
-    id_token                 String? // @db.Text
-    session_state            String?
-    user                     User    @relation(fields: [userId], references: [id], onDelete: Cascade)
-    refresh_token_expires_in Int?
+    id                String  @id @default(cuid())
+    userId            String
+    type              String
+    provider          String
+    providerAccountId String
+    refresh_token     String? // @db.Text
+    access_token      String? // @db.Text
+    expires_at        Int?
+    token_type        String?
+    scope             String?
+    id_token          String? // @db.Text
+    session_state     String?
+    user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
     @@unique([provider, providerAccountId])
 }
@@ -62,7 +50,7 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
-    posts         Post[]
+    transacoes    Transacao[]
 }
 
 model VerificationToken {
@@ -71,4 +59,30 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Transacao {
+    id         Int      @id @default(autoincrement())
+    produtoId  Int      
+    userId     String   
+    tipo       String // Entrada ou Saída
+    data       DateTime @default(now())
+    quantidade Int
+    user       User     @relation(fields: [userId], references: [id])
+    produto    Produto  @relation(fields: [produtoId], references: [id])
+}
+
+model Produto {
+    id                  Int         @id @default(autoincrement())
+    nome                String
+    quantidadeEmEstoque Int
+    transacoes          Transacao[]
+}
+
+model Contato {
+    id        Int      @id @default(autoincrement())
+    nome      String
+    emailCont String
+    telefone  String
+    createdAt DateTime @default(now())
 }
