@@ -1,20 +1,34 @@
+import { getRuntime } from "@prisma/client/runtime/library";
 import { NextResponse, type NextRequest } from "next/server";
 import { Produto, User } from "prisma";
 import { db } from "~/server/db";
+
 export async function GET(req: NextRequest) {
     try {
-      const response = (await req.json()) as ( daysPast: number );
-      const { daysPast } = response;
-      const time = await db.transacao.findMany({
-           orderBy: {
-              data: "asc",
+        const id = req.nextUrl.searchParams.get('id');
+        const response = (await req.json()) as {daysPast: number};
+        const {daysPast} = response;
+
+        const time = await db.transacao.findMany({
+            orderBy:{
+                data: "asc"
             },
-      });
-      const today = new Date();
-      const timeFiltered = time.filter((transacao) =>{
-          today.getTime() - transacao.data.getTime() > daysPast * 86400000;
-      })
-      return NextResponse.json({data : timeFiltered})
+        });
+        if (id) {
+            const produto = await db.transacao.findUnique({
+                where: {
+                    id: Number(id)
+                }
+            });
+            return NextResponse.json({ message: "OK", produto });
+        }
+
+        const today = new Date();
+        const timeFiltered = time.filter((transacao) => {
+            today.getTime() - transacao.data.getTime() >= daysPast * 86400000;
+        })
+        return NextResponse.json({data: timeFiltered})
+
     } catch (err) {
         if (err instanceof Error) {
             return NextResponse.json(
@@ -25,10 +39,11 @@ export async function GET(req: NextRequest) {
                 {
                     status: 500
                 }
-            )
+            );
         }
     }
 }
+
 export async function POST(req: NextRequest) {
     const { tipo ,quantidade, userId ,produtoId} = await req.json() as { tipo: string , quantidade: number , userId: string , produtoId: number}
     try {
