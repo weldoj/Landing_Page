@@ -175,3 +175,18 @@
 .submitButton:hover {
   background-color: rgb(255 255 255 / 0.2);
 }
+
+.account {
+  text-align: center;
+  color: white;
+  
+}
+
+/* .cadastroFail { */
+/*   text-align: center; */
+/*   color: white; */
+/* } */
+
+.account p {
+  font-size: 23px;
+}

@@ -14,9 +14,18 @@ export default function Home() {
   if (session) {
     return (
       <main className={styles.main}>
-        <div>
-            { session.data?.user.name?  <h1>Bem vindo {session.data?.user.name}</h1>: <Link href={'/login'}>Cadastro</Link>}
-            { <h1>Bem vinda</h1> && session.data?.user.name && <ButtonSignOut/>}
+        <div className={styles.account}>
+            { session.data?.user.name? 
+            <div>
+              <p>Bem vindo {session.data?.user.name}!</p>
+              <ButtonSignOut/>
+            </div>
+            :
+            <div>
+              <p> Opa, parece que você não está cadastrado </p> 
+              <p><Link href={'/login'}>Cadastre-se</Link></p>
+            </div>
+            }
         </div>
       </main>
     );
