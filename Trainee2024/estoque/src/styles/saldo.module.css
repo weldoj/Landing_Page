@@ -23,7 +23,7 @@
   }
   .dropdown {
     box-sizing: border-box;
-    width: 420px;
+    width: 900px;
     height: 60px;
     background: #ffffff;
     border: 1px solid #9e9898;
@@ -100,22 +100,4 @@
     font-size: 24px;
     line-height: 29px;
     color: #555353;
-  }
-
-  .inputsaida {
-    width: 440px;
-    height: 60px;
-    top: 173px;
-    left: 872px;
-    margin-left: 10px;
-    gap: 0px;
-    border-radius: 9px;
-    border: 1px 0px 0px 0px;
-    opacity: 0px;
-    background: #f1f1f1;
-    border: 1px solid #9E9898
-  }
-
-  .filtro:hover {
-    cursor: pointer;
   }

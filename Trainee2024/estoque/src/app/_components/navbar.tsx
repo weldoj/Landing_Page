@@ -13,8 +13,8 @@ export function Nav() {
         alt="logo"
       />
       <ul className={styles.links_nav}>
-        <Link href="#Inicio">Inicio</Link>
-        <Link href="#Conta">Conta </Link>
+        <Link href="#Inicio"><img className={styles.imgcasa} src="/imagens/casaestoque.png" alt="" />Inicio</Link>
+        <Link href="#Conta"><img className={styles.conta} src="/imagens/perfilestoque.png" alt="" />Conta</Link>
       </ul>
       <div className={styles.retangulo_nav}></div>
     </div>
