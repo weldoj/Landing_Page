@@ -58,7 +58,6 @@ export async function GET(req: NextRequest) {
                     startDate = null;
                     break;
             }
-            console.log(filter)
 
             if (startDate) {
                 whereClause.data = { 
@@ -67,7 +66,6 @@ export async function GET(req: NextRequest) {
                 };
             }
         }
-        console.log(whereClause)
 
         // Busca produtos com base no filtro
         const produtos = await db.transacao.findMany({
@@ -76,7 +74,7 @@ export async function GET(req: NextRequest) {
             }
         });
 
-        return NextResponse.json({ message: "OK", produtos });
+        return NextResponse.json({ message: "Certo", produtos });
     } catch (err) {
         if (err instanceof Error) {
             return NextResponse.json(
@@ -93,7 +91,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
-    const { tipo ,quantidade, userId ,produtoId} = await req.json() as { tipo: string , quantidade: number , userId: string , produtoId: number}
+    const { tipo ,quantidade, userId , produtoId} = await req.json() as { tipo: string , quantidade: number, userId: string, produtoId : number}
     try {
         const transacao = await db.transacao.create({
             data: {
