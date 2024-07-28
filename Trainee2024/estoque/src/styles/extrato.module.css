@@ -35,9 +35,9 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding-right: 14px;
+  padding-left: 14px;
+  justify-content: left;
 
-  justify-content: right;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -47,7 +47,9 @@
 }
 
 .seta {
-  margin: 2px 0 0 58%;
+  position: fixed;
+  align-content: right;
+  margin-left: 21%;
   width: 24px;
   height: 24px;
 }

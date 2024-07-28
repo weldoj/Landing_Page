@@ -6,10 +6,12 @@ import styles from "~/styles/index.module.css";
 export default function Extrato() {
   return (
     <main className={styles.main}>
-      <Nav />
-      <div className={styles.corpo}>
-        <Links />
-        <Extratos />
+      <div className={styles.container}>
+        <Nav />
+        <div className={styles.corpo}>
+          <Links />
+          <Extratos />
+        </div>
       </div>
     </main>
   );
