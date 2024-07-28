@@ -4,6 +4,16 @@ import Image from 'next/image'
 import { useState } from "react"
 import Link from "next/link"
 
+function PegaUrlEstoque() {
+    if (typeof window !== 'undefined') {
+      const port = window.location.port;
+      return port === '3000' ? 'http://localhost:3001/login' : 'http://localhost:3000/login';
+    }
+    return null;
+  }
+
+  const Url = PegaUrlEstoque();
+
 export function Nav() {
     const [Abrir, setAbrir] = useState(false)
     return (
@@ -23,7 +33,7 @@ export function Nav() {
                     <li><Link href="#Benefícios">Benefícios</Link></li>
                     <li><Link  href="#Funcionalidades">Funcionalidades</Link></li>
                     <li><Link   href="#Contato">Contato </Link></li>
-                    <li><Link   href="#">Entrar </Link></li>
+                    <li> <a href={Url ?? ""} target="_blank" rel="noopener noreferrer">Estoque</a> </li>
                 </ul>
 
 
@@ -47,7 +57,7 @@ export function Nav() {
                     <li><Link href="#Benefícios">Benefícios</Link></li>
                     <li><Link  href="#Funcionalidades">Funcionalidades</Link></li>
                     <li><Link   href="#Contato">Contato </Link></li>
-                    <li><Link   href="#">Entrar </Link></li>
+                    <li> <a href={Url ?? ""} target="_blank" rel="noopener noreferrer">Estoque</a> </li>
                 </ul>
             </div>
             }
