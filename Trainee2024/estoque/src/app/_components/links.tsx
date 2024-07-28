@@ -25,7 +25,7 @@ export function Links() {
           <Link href="Saldo">SALDO</Link>
         </li>
         <li>
-          <Link href="Entradas">ENTRADAS</Link>
+          <Link href="Entradas" >ENTRADAS</Link>
         </li>
         <li>
           <Link href="Saidas">SAIDAS</Link>
