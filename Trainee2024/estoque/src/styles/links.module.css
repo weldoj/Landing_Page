@@ -1,0 +1,28 @@
+.links {
+  width: 253px;
+  height: 536px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.link1 {
+  width: 220px;
+  height: 50px;
+  background: #e8e1e1;
+  border-radius: 9px;
+}
+.links li {
+  list-style: none;
+}
+.links li p {
+  color: #a6a2a2;
+}
+.links li a {
+  list-style: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 39px;
+  color: #868585;
+}

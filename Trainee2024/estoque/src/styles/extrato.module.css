@@ -1,0 +1,110 @@
+.ext {
+  display: flex;
+  margin: 40px 0 23px 80px;
+}
+.botaofiltro {
+  margin-left: 20px;
+  width: 250px;
+  height: 60px;
+  left: 850px;
+  top: 174px;
+  background-color: #f9f9f9;
+  border-radius: 9px;
+}
+.botaofiltro :hover {
+  background: #d6cece;
+}
+.filtro {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #767272;
+  border-radius: 9px;
+}
+
+.dropdown {
+  box-sizing: border-box;
+  width: 420px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #9e9898;
+  border-radius: 9px;
+}
+
+.dropbtn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  justify-content: left;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}
+
+.seta {
+  position: fixed;
+  align-content: right;
+  margin-left: 21%;
+  width: 24px;
+  height: 24px;
+}
+.dropdownContent {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.dropdownContent h3 {
+  margin: 10px 0 0 8.8%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}
+.opcoes {
+  margin: 0 0 0 4.7%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}
