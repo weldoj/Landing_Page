@@ -63,8 +63,8 @@ model VerificationToken {
 
 model Transacao {
     id         Int      @id @default(autoincrement())
-    produtoId  Int
-    userId     String
+    produtoId  Int      
+    userId     String   
     tipo       String // Entrada ou Saída
     data       DateTime @default(now())
     quantidade Int
