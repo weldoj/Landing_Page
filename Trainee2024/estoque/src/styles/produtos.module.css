@@ -28,3 +28,6 @@
   line-height: 34px;
   color: #767272;
 }
+.pesquisa button :hover {
+  background: #d6cece;
+}
