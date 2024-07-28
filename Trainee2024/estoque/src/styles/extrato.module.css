@@ -1,0 +1,103 @@
+.ext {
+  display: flex;
+  margin: 40px 0 23px 80px;
+}
+.filtro {
+  width: 250px;
+  height: 60.36px;
+  margin: 0 0 0 20px;
+  box-sizing: border-box;
+
+  background: #e8e1e1;
+  border: 1px solid #9e9898;
+  border-radius: 9px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+
+  color: #767272;
+  border: 1px solid #9e9898;
+}
+.dropdown {
+  box-sizing: border-box;
+  width: 420px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #9e9898;
+  border-radius: 9px;
+}
+
+.dropbtn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 14px;
+
+  justify-content: right;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}
+
+.seta {
+  margin: 2px 0 0 58%;
+  width: 24px;
+  height: 24px;
+}
+.dropdownContent {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent a {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropbtn a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.dropdownContent h3 {
+  margin: 10px 0 0 8.8%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}
+.opcoes {
+  margin: 0 0 0 4.7%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #555353;
+}

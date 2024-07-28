@@ -1,6 +1,6 @@
 import { Nav } from "../_components/navbar";
 import { Links } from "../_components/links";
-import { Ext } from "../_components/Extrato";
+import { Extratos } from "../_components/extrato";
 import styles from "~/styles/index.module.css";
 
 export default function Extrato() {
@@ -9,7 +9,7 @@ export default function Extrato() {
       <Nav />
       <div className={styles.corpo}>
         <Links />
-        <Ext />
+        <Extratos />
       </div>
     </main>
   );

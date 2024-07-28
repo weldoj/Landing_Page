@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import styles from "~/styles/venda.module.css";
+import styles from "~/styles/extrato.module.css";
 
-export function Venda() {
+export function Extratos() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -17,13 +17,22 @@ export function Venda() {
         >
           <h3 className={styles.selecione}>Filtrar por</h3>
           <a className={styles.opcoes} href="#ultimaSemana">
-            Produtos mais vendidos
+            Última semana
           </a>
           <a className={styles.opcoes} href="#ultimos12Dias">
-            Produtos menos vendidos
+            Ultimos 15 dias
           </a>
           <a className={styles.opcoes} href="#ultimoMes">
-            Produtos sem estoque
+            Último mês
+          </a>
+          <a className={styles.opcoes} href="#ultimoTrimestre">
+            Último trimestre
+          </a>
+          <a className={styles.opcoes} href="#ultimoSemestre">
+            Último semestre
+          </a>
+          <a className={styles.opcoes} href="#ultimoAno">
+            Último ano
           </a>
         </div>
       </div>
