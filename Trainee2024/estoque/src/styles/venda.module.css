@@ -2,25 +2,30 @@
   display: flex;
   margin: 40px 0 23px 80px;
 }
-.filtro {
+.botaofiltro {
+  margin-left: 20px;
   width: 250px;
-  height: 60.36px;
-  margin: 0 0 0 20px;
-  box-sizing: border-box;
-
-  background: #e8e1e1;
-  border: 1px solid #9e9898;
+  height: 60px;
+  left: 850px;
+  top: 174px;
+  background-color: #f9f9f9;
   border-radius: 9px;
-
+}
+.botaofiltro :hover {
+  background: #d6cece;
+}
+.filtro {
+  width: 100%;
+  height: 100%;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
   line-height: 34px;
-
   color: #767272;
-  border: 1px solid #9e9898;
+  border-radius: 9px;
 }
+
 .dropdown {
   box-sizing: border-box;
   width: 420px;
@@ -35,9 +40,9 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding-right: 14px;
+  padding-left: 14px;
+  justify-content: left;
 
-  justify-content: right;
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -47,7 +52,9 @@
 }
 
 .seta {
-  margin: 2px 0 0 58%;
+  position: fixed;
+  align-content: right;
+  margin-left: 21%;
   width: 24px;
   height: 24px;
 }

@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { Providers } from "../components/Providers";
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -9,12 +10,26 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={GeistSans.className}>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
+// export default function RootLayout({
+//   children,
+// }: Readonly<{ children: React.ReactNode }>) {
+//   return (
+//     <html lang="en">
+//       <body className={GeistSans.className}>{children}</body>
+//     </html>
+//   );
+// }

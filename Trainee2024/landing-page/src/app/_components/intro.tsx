@@ -14,7 +14,7 @@ export function Intro() {
             </div>
             <div className={introStyles.introImg}>
                 <Image
-                    src="/Mockup.png"
+                    src="/Mockup1.png"
                     width={700}
                     height={700}
                     alt="Picture of the author"

@@ -28,5 +28,16 @@
   line-height: 34px;
   color: #767272;
 }
+<<<<<<< HEAD
 
 
+=======
+.pesquisa button :hover {
+  background: #d6cece;
+}
+.produtos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+}
+>>>>>>> 11944f768d3943d4f9082e73e4025a906fbd166d
