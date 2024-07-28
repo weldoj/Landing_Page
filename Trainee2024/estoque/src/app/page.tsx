@@ -1,39 +1,24 @@
+"use client"
 import Link from "next/link";
 
+
 import styles from "./index.module.css";
+import { SingUp } from "./login/_components/singup";
+import AuthComponent from '../components/AuthComponent';
+import { ButtonSignOut } from "./login/_components/singout";
+import { getServerSession } from "next-auth";
+import { useSession } from "next-auth/react";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.container}>
-        <h1 className={styles.title}>
-          Create <span className={styles.pinkSpan}>T3</span> App
-        </h1>
-        <div className={styles.cardRow}>
-          <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
-          >
-            <h3 className={styles.cardTitle}>First Steps →</h3>
-            <div className={styles.cardText}>
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className={styles.card}
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className={styles.cardTitle}>Documentation →</h3>
-            <div className={styles.cardText}>
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+  const session = useSession();
+  if (session) {
+    return (
+      <main className={styles.main}>
+        <div>
+            { session.data?.user.name?  <h1>Bem vindo {session.data?.user.name}</h1>: <Link href={'/login'}>Cadastro</Link>}
+            { <h1>Bem vinda</h1> && session.data?.user.name && <ButtonSignOut/>}
         </div>
-      </div>
-    </main>
-  );
+      </main>
+    );
+  }
 }

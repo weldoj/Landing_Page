@@ -6,14 +6,9 @@ import { db } from "~/server/db";
 export async function GET(req: NextRequest) {
     try {
         const id = req.nextUrl.searchParams.get('id');
-        const response = (await req.json()) as {daysPast: number};
-        const {daysPast} = response;
+        const filter = req.nextUrl.searchParams.get('filter');
 
-        const time = await db.transacao.findMany({
-            orderBy:{
-                data: "asc"
-            },
-        });
+        // Verifica se foi passado um ID e busca o produto correspondente
         if (id) {
             const produto = await db.transacao.findUnique({
                 where: {
@@ -23,12 +18,65 @@ export async function GET(req: NextRequest) {
             return NextResponse.json({ message: "OK", produto });
         }
 
-        const today = new Date();
-        const timeFiltered = time.filter((transacao) => {
-            today.getTime() - transacao.data.getTime() >= daysPast * 86400000;
-        })
-        return NextResponse.json({data: timeFiltered})
+        // Prepara o filtro de data
+        var whereClause: any = {};
+        const today = new Date(); // Data atual
+        let startDate: Date | null = null;
 
+        if (filter) {
+            switch (filter) {
+                case 'Últimos 7 Dias':
+                    startDate = new Date(today);
+                    startDate.setDate(today.getDate() - 7);
+                    break;
+                case 'Última Semana':
+                    startDate = new Date(today);
+                    startDate.setDate(today.getDate() - today.getDay()); // Início da semana
+                    break;
+                case 'Último Mês':
+                    startDate = new Date(today);
+                    startDate.setMonth(today.getMonth() - 1);
+                    startDate.setDate(1); // Início do mês
+                    break;
+                case 'Último Trimestre':
+                    startDate = new Date(today);
+                    startDate.setMonth(today.getMonth() - 3);
+                    startDate.setDate(1); // Início do trimestre
+                    break;
+                case 'Último Semestre':
+                    startDate = new Date(today);
+                    startDate.setMonth(today.getMonth() - 6);
+                    startDate.setDate(1); // Início do semestre
+                    break;
+                case 'Último Ano':
+                    startDate = new Date(today);
+                    startDate.setFullYear(today.getFullYear() - 1);
+                    startDate.setMonth(0); // Janeiro
+                    startDate.setDate(1); // Início do ano
+                    break;
+                default:
+                    startDate = null;
+                    break;
+            }
+            console.log(filter)
+
+            if (startDate) {
+                whereClause.data = { 
+                    gte: startDate, 
+                    lte: today 
+                };
+            }
+        }
+        console.log(whereClause)
+
+        // Busca produtos com base no filtro
+        const produtos = await db.transacao.findMany({
+            where: {
+                ...whereClause
+            }
+        });
+
+        return NextResponse.json({ message: "OK", produtos });
     } catch (err) {
         if (err instanceof Error) {
             return NextResponse.json(
