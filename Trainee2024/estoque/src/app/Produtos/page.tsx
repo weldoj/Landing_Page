@@ -1,7 +1,7 @@
-import { Nav } from "./_components/navbar";
-import { Links } from "./_components/links";
-import { Produtos } from "./_components/Produtos";
-import styles from "../styles/index.module.css";
+import { Nav } from "../_components/navbar";
+import { Links } from "../_components/links";
+import { Produtos } from "../_components/Produtos";
+import styles from "~/styles/index.module.css";
 
 export default function Home() {
   return (
