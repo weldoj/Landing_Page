@@ -3,6 +3,7 @@ import styles from "~/styles/produtos.module.css";
 
 export async function Produtos() {
   try {
+    "use server"
     const response = await fetch("http://localhost:3000/api/produtos");
     const data: { mensage: string; produtos: { id: number; name: string }[] } =
       (await response.json()) as {
