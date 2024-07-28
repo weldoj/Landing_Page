@@ -1,5 +1,6 @@
 import { Nav } from "../_components/navbar";
 import { Links } from "../_components/links";
+import { Entradas } from "../_components/Entradas";
 import styles from "~/styles/index.module.css";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Nav />
         <div className={styles.corpo}>
           <Links />
+          <Entradas />
         </div>
       </div>
     </main>

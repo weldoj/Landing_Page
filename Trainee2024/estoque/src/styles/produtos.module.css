@@ -6,7 +6,7 @@
 .pesquisa input {
   display: flex;
   box-sizing: border-box;
-  width: 900px;
+  width: 95%;
   height: 60px;
   background: #ffffff;
   border: 1px solid #9e9898;
@@ -18,10 +18,9 @@
   height: 60.36px;
   box-sizing: border-box;
   background: #e8e1e1;
-  border: 1px solid #9e9898;
+  border: 1px solid hsl(0, 3%, 61%);
   border-radius: 9px;
   margin: 0 0 0 20px;
-
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
